@@ -206,15 +206,15 @@ int main(int argc, char **argv)
 
     unsigned short clientsPort, observerPort; /* Server port */
 
-    if (argc < 5) /* Test for correct number of arguments */
+    if (argc < 4) /* Test for correct number of arguments */
     {
-        fprintf(stderr, "Usage:  %s <IP> <Server Port> <Observer Port> <Observers number>\n", argv[0]);
+        fprintf(stderr, "Usage:  %s <Server Port> <Observer Port> <Observers number>\n", argv[0]);
         exit(1);
     }
 
-    clientsPort = atoi(argv[2]);  /* First arg:  local port */
-    observerPort = atoi(argv[3]); /* Second arg:  local port */
-    observers_number = atoi(argv[4]);
+    clientsPort = atoi(argv[1]);  /* First arg:  local port */
+    observerPort = atoi(argv[2]); /* Second arg:  local port */
+    observers_number = atoi(argv[3]);
     
 
     // создаём и инициализируем семофоры
